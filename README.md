@@ -1,29 +1,42 @@
-# 💳 Credit Card Fraud Detection using Machine Learning
+# Credit Card Fraud Detection
 
-This project focuses on detecting fraudulent credit card transactions using classification algorithms on an imbalanced dataset.
+A machine learning-based app to detect fraudulent credit card transactions using real anonymized data and a trained XGBoost model. This project combines data science, explainability, and a simple web UI via Streamlit.
 
-## 📊 Project Overview
+---
 
-- Developed a binary classification model to distinguish between legitimate and fraudulent transactions.
-- Addressed class imbalance using oversampling techniques like SMOTE.
-- Evaluated model performance using metrics suited for imbalanced data.
+## 🚀 Features
 
-## 🛠️ Tools & Technologies
+- Upload a CSV file with transactions
+- Predict whether each transaction is **Fraudulent** or **Genuine**
+- Displays **fraud probability**
+- Download the results with predictions
+- (Optional) Add SHAP interpretability
 
-- **Language**: Python  
-- **Libraries**: Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib, imbalanced-learn  
-- **Environment**: Jupyter Notebook / VS Code
+---
 
-## ⚙️ Models Used
+## 📊 Model Used
 
-- Logistic Regression  
-- Decision Tree Classifier  
-- Random Forest Classifier  
-- Performance Metrics: Accuracy, Precision, Recall, F1-Score, ROC-AUC
+- **Algorithm**: XGBoost Classifier, Random Forest
+- **Handling Imbalance**: SMOTE oversampling
+- **Evaluation Metrics**: Recall, F1-Score, AUC
 
-## 🔍 Key Challenges & Solutions
+---
 
-- **Challenge**: Highly imbalanced data (~0.17% fraud cases)  
-- **Solution**: Used SMOTE (Synthetic Minority Oversampling) to balance the dataset  
-- Focused on **Recall** and **ROC-AUC** to reduce false negatives
+## 📁 Files
+
+| File | Description |
+|------|-------------|
+| `app.py` | Streamlit app script |
+| `model_xgb.pkl` | Trained XGBoost model |
+| `requirements.txt` | Required packages for running locally or on Streamlit Cloud |
+| `README.md` | This file |
+
+---
+
+## 🧪 Run Locally
+
+1. Clone this repo  
+2. Install dependencies  
+   ```bash
+   pip install -r requirements.txt
 
